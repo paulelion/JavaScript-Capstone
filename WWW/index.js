@@ -75,78 +75,78 @@ var game = [
 ];
 
 var hint = [
-  "No Foe May Pass",
-  "Never Resting",
-  "As High as Honor",
-  "Our Sun Shines Bright",
-  "Ours is the Fury",
-  "Beware Our Sting",
-  "Our Blades Are Sharp",
-  "Pride and Purpose",
-  "Death Before Disgrace",
-  "No Song So Sweet",
-  "Honed and Ready",
-  "Though All Men Do Despise Us",
-  "None so Fierce",
-  "By Day or Night",
-  "Ever Vigilant",
-  "None so Wise",
-  "Tread Lightly Here",
-  "Iron From Ice",
-  "A Taste of Glory",
-  "Let Me Soar",
-  "Work Her Will",
-  "Rouse Me Not",
-  "We Do Not Sow",
-  "None So Dutiful",
-  "We Light the Way",
-  "Righteous in Wrath",
-  "Let It Be Written",
-  "The Sun of Winter",
-  "Hear Me Roar",
-  "The Choice Is Yours",
-  "Burning Bright",
-  "Unbowed, Unbent, Unbroken",
-  "Here We Stand",
-  "Above the Rest",
-  "Behold Our Bounty",
-  "Wisdom and Strength",
-  "Our Roots Go Deep",
-  "Unflinching",
-  "Set Down Our Deeds",
-  "Brave and Beautiful",
-  "Come Try Me",
-  "As Strong as Stone",
-  "We Remember",
-  "True to the Mark",
-  "Family is Hope, Protect it Always",
-  "I Have No Rival",
-  "From These Beginnings",
-  "Winter is Coming",
-  "Proud to Be Faithful",
-  "Truth Conquers",
-  "Awake! Awake!",
-  "Proud and Free",
-  "Fire and Blood",
-  "First in Battle",
-  "When All is Darkest",
-  "Fly High, Fly Far",
-  "So End Our Foes",
-  "Family, Duty, Honor",
-  "Growing Strong",
-  "The Old, the True, the Brave",
-  "Light in Darkness",
-  "For All Seasons",
-  "Sound the Charge",
-  "Honor, not Honors",
-  "Death Over Dishonor",
-  "Ever Higher",
-  "Touch Me Not",
-  "Right Conquers Might",
-  "We Guard the Way"
+  "'No Foe May Pass'",
+  "'Never Resting'",
+  "'As High as Honor'",
+  "'Our Sun Shines Bright'",
+  "'Ours is the Fury'",
+  "'Beware Our Sting'",
+  "'Our Blades Are Sharp'",
+  "'Pride and Purpose'",
+  "'Death Before Disgrace'",
+  "'No Song So Sweet'",
+  "'Honed and Ready'",
+  "'Though All Men Do Despise Us'",
+  "'None so Fierce'",
+  "'By Day or Night'",
+  "'Ever Vigilant'",
+  "'None so Wise'",
+  "'Tread Lightly Here'",
+  "'Iron From Ice'",
+  "'A Taste of Glory'",
+  "'Let Me Soar'",
+  "'Work Her Will'",
+  "'Rouse Me Not'",
+  "'We Do Not Sow'",
+  "'None So Dutiful'",
+  "'We Light the Way'",
+  "'Righteous in Wrath'",
+  "'Let It Be Written'",
+  "'The Sun of Winter'",
+  "'Hear Me Roar'",
+  "'The Choice Is Yours'",
+  "'Burning Bright'",
+  "'Unbowed, Unbent, Unbroken'",
+  "'Here We Stand'",
+  "'Above the Rest'",
+  "'Behold Our Bounty'",
+  "'Wisdom and Strength'",
+  "'Our Roots Go Deep'",
+  "'Unflinching'",
+  "'Set Down Our Deeds'",
+  "'Brave and Beautiful'",
+  "'Come Try Me'",
+  "'As Strong as Stone'",
+  "'We Remember'",
+  "'True to the Mark'",
+  "'Family is Hope, Protect it Always'",
+  "'I Have No Rival'",
+  "'From These Beginnings'",
+  "'Winter is Coming'",
+  "'Proud to Be Faithful'",
+  "'Truth Conquers'",
+  "'Awake! Awake!'",
+  "'Proud and Free'",
+  "'Fire and Blood'",
+  "'First in Battle'",
+  "'When All is Darkest'",
+  "'Fly High, Fly Far'",
+  "'So End Our Foes'",
+  "'Family, Duty, Honor'",
+  "'Growing Strong'",
+  "'The Old, the True, the Brave'",
+  "'Light in Darkness'",
+  "'For All Seasons'",
+  "'Sound the Charge'",
+  "'Honor, not Honors'",
+  "'Death Over Dishonor'",
+  "'Ever Higher'",
+  "'Touch Me Not'",
+  "'Right Conquers Might'",
+  "'We Guard the Way'"
 ];
 
-var choice = Math.floor(Math.random() * 4);
+var choice = Math.floor(Math.random() * game.length);
 var answer = game[choice];
 var hints = hint[choice];
 var myLength = answer.length;
@@ -219,6 +219,13 @@ window.onload = function() {
   var form = document.getElementById("form");
   form.onsubmit = submit;
 
+  /*btn = document.getElementById("submit")
+  btn.onclick = () => {
+    let input = document.querySelector("input")
+    input.value = ""
+  }*/
+
+
   document.getElementById("restart").onclick = setup;
   
    
@@ -226,4 +233,5 @@ window.onload = function() {
     document.getElementById("showhint").innerHTML = hints
   });
 };
+
 

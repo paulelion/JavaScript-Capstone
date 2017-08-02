@@ -1,0 +1,85 @@
+body, html {
+  height: 100%;
+}
+
+h4, button, form, ul, p {
+  text-align: center;
+}
+
+h4, p {
+  font-size: 20px;
+  font-family: arial;
+  color: #28353d;
+}
+
+ul {
+  font-size: 30px;
+  font-family: arial;
+  color: #28353d;
+}
+
+.button{
+  width: 100px;
+  background-color:#8ab4ce;
+  font-family: arial;
+  font-size: 20px;
+  padding-left: 5px, 10px, 5px, 10px;
+  color: #28353d;
+}
+
+.button:hover{
+  background-color:#7dbde8;
+}
+
+input {
+  font-size: 20px;
+  padding-top: 2px;
+  padding-bottom: 5px;
+  padding-right: 25px;
+}
+
+#header {
+  width: 80%;
+  margin-top: 40px;
+  margin-bottom: 25px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 30px;
+}
+
+#subheader {
+  width: 65%; 
+  display: block;
+  margin-left: auto;
+  margin-right: auto; 
+}
+
+#game {
+  padding-left: 0;
+}
+
+.class {
+  text-align: center;
+}
+
+#border {
+  width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 35px;
+  padding-bottom: 35px;
+  background: rgba(255, 255, 255, 0.7);
+  border-style: double;
+}
+
+
+#background {
+  background-image: url("../WWW/Pics/GoT-background2.jpg");
+  height: 120%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
