@@ -219,11 +219,15 @@ window.onload = function() {
   var form = document.getElementById("form");
   form.onsubmit = submit;
 
-  /*btn = document.getElementById("submit")
+
+//button takes input but doesn't recognize if letter is correct or not
+  /*
+  btn = document.getElementById("submit")
   btn.onclick = () => {
     let input = document.querySelector("input")
     input.value = ""
-  }*/
+  }
+  */
 
 
   document.getElementById("restart").onclick = setup;
