@@ -162,7 +162,7 @@ var setup = function() {
   document.getElementById("game").innerHTML = output;
   output = "";
   document.getElementById("showhint").innerHTML = "";
-  choice = Math.floor(Math.random() * 4);
+  choice = Math.floor(Math.random() * game.length);
   answer = game[choice];
   hints = hint[choice];
   myLength = answer.length;
@@ -203,9 +203,11 @@ var submit = function(event) {
   if(!found) attemptsLeft--;
 
   if (win < 1) {
-    alert("You win! You live to fight another day!");
+    alert("You win! You live to fight another day!"); //document.ge
+    setup();
   } else if (attemptsLeft < 1) {
     alert("You lose! Your head shall be mine!");
+    setup();
   } else {
     document.getElementById("guesses").innerHTML =
       "You have " + attemptsLeft + " guesses left";
@@ -237,5 +239,38 @@ window.onload = function() {
     document.getElementById("showhint").innerHTML = hints
   });
 };
+
+
+//MODAL BEGIN
+
+// Get the modal
+var modal = document.getElementById('myModal');
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on the button, open the modal 
+
+
+// When the user clicks on <span> (x), close the modal
+window.addEventListener("load", function(){
+    setTimeout(function(){
+
+    modal.
+
+    addEventListener.
+
+    remove("hidden")
+}
+    
+})
+
+span.onclick = function() {
+    modal.classList.add("hidden")
+}
+
+//MODAL END
+
+
 
 
