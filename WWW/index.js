@@ -203,10 +203,10 @@ var submit = function(event) {
   if(!found) attemptsLeft--;
 
   if (win < 1) {
-    alert("You win! You live to fight another day!"); //document.ge
+    document.querySelector(".winModal").classList.remove("hidden")
     setup();
   } else if (attemptsLeft < 1) {
-    alert("You lose! Your head shall be mine!");
+    document.querySelector(".loseModal").classList.remove("hidden")
     setup();
   } else {
     document.getElementById("guesses").innerHTML =
@@ -243,13 +243,9 @@ window.onload = function() {
 
 //MODAL BEGIN
 
-var modal = document.querySelector(".modal")
 
 
-btn.onclick = function(){
-  modal.classList.remove("hidden");
-};
 
-modal.onclick = function(){
+function modal(){
   modal.classList.add("hidden");
 };
