@@ -241,10 +241,7 @@ window.onload = function() {
 };
 
 
-//MODAL BEGIN
-
-
-
+//MODAL
 
 function modal(){
   modal.classList.add("hidden");
