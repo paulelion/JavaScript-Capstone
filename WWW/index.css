@@ -175,16 +175,16 @@ input {
   background-color: black;
 }
 
-.lose-close {
+.win-close {
     color: #aaa;
-    float: right;
+    float:right;
     font-size: 35px;
     padding-right: 14px;
     font-weight: bold;
 }
 
-.lose-close:hover,
-.lose-close:focus {
+.win-close:hover,
+.win-close:focus {
     color: white;
     text-decoration: none;
     cursor: pointer;
