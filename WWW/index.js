@@ -231,8 +231,7 @@ window.onload = function() {
     input.value = ""
   }
   */
-
-
+  
   document.getElementById("restart").onclick = setup; 
    
   document.getElementById("hint").addEventListener("click", function(){
@@ -245,11 +244,16 @@ window.onload = function() {
 
 
 
-function modal(){
-  modal.classList.add("hidden");
-};
 
-var span = document.getElementsByClassName("lose-close")[0];
-span.onclick = setup;
+
+var loseRestart = function() {
+  document.querySelector('.loseModal').classList.add('hidden');
+  setup();
+}
+
+var winRestart = function() {
+  document.querySelector(".winModal").classList.add('')
+winRestart.onclick = setup;
+
 
 
