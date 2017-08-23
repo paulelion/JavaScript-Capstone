@@ -1,5 +1,5 @@
 body, html {
-  height: 100%;
+  width: auto;
 }
 
 h4, button, form, ul, p {
@@ -79,10 +79,23 @@ input {
   height: 120%;
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: stretch;
 }
 
-/* MODAL BEGINS */
+/* MODAL */
+
+.hidden {
+  display: none
+}
+
+.modaltext {
+  text-align: center;
+  font-family: arial;
+  color: white;
+  font-size: 40px;
+}
+
+/* MODAL IF YOU LOSE */
 
 .loseModal {
     position: fixed; /* Stay in place */
@@ -91,64 +104,78 @@ input {
     top: 0;
     width: 100%; /* Full width */
     height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
+     /* Enable scroll if needed */
     background-color: rgb(0,0,0); /* Fallback color */
     background-color: rgba(0,0,0,0.8); /* Black w/ opacity */
     margin: auto;
 }
 
-/*
-.winModal {
-  position: absolute;
-  width: 100vw;
-  height: 100vh;
-  background: rgba(15, 15, 15, 0.9);
-  top: 0;
-  left: 0;
-  margin: auto 0;
-  padding: 0;
+.lose-modal-body {
+  width: 1000px;
+  height: 600px;
+  text-align: center; 
+  margin: auto;
+  display: block;
+  margin-top: auto;
+  padding-top: 90px;
 }
-.modal-body, .gif, .modaltext {
-    background-color: #fefefe;
-    margin: auto; /* 15% from the top and centered */
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%; /* Could be more or less, depending on screen size */
-}
- /* 
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background: rgba(15, 15, 15, 0.9);
-}
-*/
 
-.close:hover,
-.close:focus {
-    color: black;
+.lose-inside-modal {
+  padding-top: 15px;
+  padding-bottom: 30px;
+  background-color: black;
+}
+
+.lose-close {
+    color: #aaa;
+    float: right;
+    font-size: 35px;
+    padding-right: 14px;
+    font-weight: bold;
+}
+
+.lose-close:hover,
+.lose-close:focus {
+    color: white;
     text-decoration: none;
     cursor: pointer;
 }
 
-.hidden {
-  display: none
+
+/* MODAL IF YOU WIN */
+
+
+.winModal {
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+     /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.8); /* Black w/ opacity */
+    margin: auto;
 }
-.hidden {
-  display: none;
-  opacity: 0;
+    
+.win-modal-body {
+  width: 1000px;
+  height: 600px;
+  text-align: center; 
+  margin: auto;
+  display: block;
+  margin-top: auto;
+  padding-top: 65px;
+  padding-bottom: 15px;
 }
 
-.modaltext {
-  text-align: center;
-  font-family: arial;
-  color: white;
+.win-inside-modal {
+  padding-top: 15px;
+  padding-bottom: 30px;
+  background-color: black;
 }
-/* The Close Button */
-.close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-}
+
+
+
+
 
