@@ -165,8 +165,8 @@ input {
   margin: auto;
   display: block;
   margin-top: auto;
-  padding-top: 65px;
-  padding-bottom: 15px;
+  padding-top: 60px;
+  padding-bottom: 20px;
 }
 
 .win-inside-modal {
@@ -175,6 +175,20 @@ input {
   background-color: black;
 }
 
+.lose-close {
+    color: #aaa;
+    float: right;
+    font-size: 35px;
+    padding-right: 14px;
+    font-weight: bold;
+}
+
+.lose-close:hover,
+.lose-close:focus {
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
 
 
 
