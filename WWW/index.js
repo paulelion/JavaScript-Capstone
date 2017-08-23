@@ -233,8 +233,7 @@ window.onload = function() {
   */
 
 
-  document.getElementById("restart").onclick = setup;
-  
+  document.getElementById("restart").onclick = setup; 
    
   document.getElementById("hint").addEventListener("click", function(){
     document.getElementById("showhint").innerHTML = hints
@@ -244,11 +243,13 @@ window.onload = function() {
 
 //MODAL
 
+
+
 function modal(){
   modal.classList.add("hidden");
 };
 
-span.onclick = function() {
-    modal.classList.add("hidden");
-}
+var span = document.getElementsByClassName("lose-close")[0];
+span.onclick = setup;
+
 
