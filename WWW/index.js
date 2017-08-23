@@ -203,10 +203,10 @@ var submit = function(event) {
   if(!found) attemptsLeft--;
 
   if (win < 1) {
-    document.querySelector(".winModal").classList.remove("hidden")
+    document.querySelector(".winModal").classList.remove("hidden");
     setup();
   } else if (attemptsLeft < 1) {
-    document.querySelector(".loseModal").classList.remove("hidden")
+    document.querySelector(".loseModal").classList.remove("hidden");
     setup();
   } else {
     document.getElementById("guesses").innerHTML =
@@ -214,6 +214,7 @@ var submit = function(event) {
   }
   
 };
+
 
 window.onload = function() {
   setup();
@@ -246,3 +247,8 @@ window.onload = function() {
 function modal(){
   modal.classList.add("hidden");
 };
+
+span.onclick = function() {
+    modal.classList.add("hidden");
+}
+
