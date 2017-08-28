@@ -159,8 +159,6 @@ var userLetter = "";
 
 var setup = function() {
 
-  document.getElementById("game").innerHTML = output;
-  output = "";
   document.getElementById("showhint").innerHTML = "";
   choice = Math.floor(Math.random() * game.length);
   answer = game[choice];
@@ -170,19 +168,18 @@ var setup = function() {
   win = myLength;
   letters = answer.split("");
   attemptsLeft = 7;
-  output = "";
   userLetter = "";
   
-    for (var i = 0; i < answer.length; i++) {
+  for (var i = 0; i < answer.length; i++) {
     display[i] = " _ ";
-    output = output + display[i];
+    var output = display.join(" ");
   }
+  document.getElementById("game").innerHTML = output
 };
 
 var submit = function(event) {
   event.preventDefault();
   
-  output = "";
   userLetter = $("letter").value;
   var found = false;
 
@@ -198,7 +195,7 @@ var submit = function(event) {
     output += display[c] + " ";
   }
   console.log(output)
-  document.getElementById("game").innerHTML = output;
+  document.getElementById("game").innerHTML = output
   output = "";
   if(!found) attemptsLeft--;
 
@@ -243,17 +240,15 @@ window.onload = function() {
 //MODAL
 
 
-
-
-
 var loseRestart = function() {
   document.querySelector('.loseModal').classList.add('hidden');
   setup();
 }
 
 var winRestart = function() {
-  document.querySelector(".winModal").classList.add('')
-winRestart.onclick = setup;
+  document.querySelector(".winModal").classList.add('hidden');
+  setup();
+}
 
 
 

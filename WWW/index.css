@@ -126,7 +126,7 @@ input {
   background-color: black;
 }
 
-.lose-close {
+.close {
     color: #aaa;
     float: right;
     font-size: 35px;
@@ -134,8 +134,8 @@ input {
     font-weight: bold;
 }
 
-.lose-close:hover,
-.lose-close:focus {
+.close:hover,
+.close:focus {
     color: white;
     text-decoration: none;
     cursor: pointer;
@@ -175,7 +175,7 @@ input {
   background-color: black;
 }
 
-.win-close {
+.close {
     color: #aaa;
     float:right;
     font-size: 35px;
@@ -183,8 +183,8 @@ input {
     font-weight: bold;
 }
 
-.win-close:hover,
-.win-close:focus {
+.close:hover,
+.close:focus {
     color: white;
     text-decoration: none;
     cursor: pointer;
