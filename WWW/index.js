@@ -2,6 +2,8 @@ var $ = function(id) {
   return document.getElementById(id);
 };
 
+// Variables
+
 var game = [
   "Allyrion",
   "Ambrose",
@@ -146,6 +148,8 @@ var hint = [
   "'We Guard the Way'"
 ];
 
+// Variables 
+
 var choice = Math.floor(Math.random() * game.length);
 var answer = game[choice];
 var hints = hint[choice];
@@ -156,6 +160,9 @@ var letters = answer.split("");
 var attemptsLeft = 7;
 var output = "";
 var userLetter = "";
+
+
+// Game setup
 
 var setup = function() {
 
@@ -176,6 +183,9 @@ var setup = function() {
   }
   document.getElementById("game").innerHTML = output
 };
+
+
+// Making guesses
 
 var submit = function(event) {
   event.preventDefault();
@@ -199,12 +209,15 @@ var submit = function(event) {
   output = "";
   if(!found) attemptsLeft--;
 
+
   if (win < 1) {
     document.querySelector(".winModal").classList.remove("hidden");
     setup();
+    
   } else if (attemptsLeft < 1) {
     document.querySelector(".loseModal").classList.remove("hidden");
     setup();
+
   } else {
     document.getElementById("guesses").innerHTML =
       "You have " + attemptsLeft + " guesses left";
@@ -219,15 +232,6 @@ window.onload = function() {
   var form = document.getElementById("form");
   form.onsubmit = submit;
 
-
-//button takes input but doesn't recognize if letter is correct or not
-  /*
-  btn = document.getElementById("submit")
-  btn.onclick = () => {
-    let input = document.querySelector("input")
-    input.value = ""
-  }
-  */
   
   document.getElementById("restart").onclick = setup; 
    
