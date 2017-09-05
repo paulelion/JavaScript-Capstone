@@ -162,7 +162,7 @@ var output = "";
 var userLetter = "";
 
 
-// Game setup
+// Game Setup
 
 var setup = function() {
 
@@ -182,10 +182,12 @@ var setup = function() {
     var output = display.join(" ");
   }
   document.getElementById("game").innerHTML = output
+  document.getElementById("guesses").innerHTML =
+      "You have " + attemptsLeft + " guesses left";
 };
 
 
-// Making guesses
+// Making Guesses
 
 var submit = function(event) {
   event.preventDefault();
@@ -194,7 +196,6 @@ var submit = function(event) {
   var found = false;
 
   for (var c = 0; c < answer.length; c++) {
-    //alert(letters[c]);
     if (userLetter.toUpperCase() === letters[c].toUpperCase()) {
       found = true
       display[c] = userLetter;
@@ -225,12 +226,14 @@ var submit = function(event) {
   
 };
 
+// Buttons
 
 window.onload = function() {
   setup();
 
   var form = document.getElementById("form");
   form.onsubmit = submit;
+
 
   
   document.getElementById("restart").onclick = setup; 
@@ -241,7 +244,7 @@ window.onload = function() {
 };
 
 
-//MODAL
+// Modals
 
 
 var loseRestart = function() {
